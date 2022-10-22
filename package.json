@@ -1,0 +1,23 @@
+{
+  "name": "@example/portfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "prettier": "prettier --write --ignore-path .gitignore .",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^2.1.1",
+    "astro": "^1.5.2",
+    "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13"
+  }
+}
