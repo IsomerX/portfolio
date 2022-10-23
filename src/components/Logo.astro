@@ -1,5 +1,14 @@
 <div
-  class='text-4xl font-montserrat font-black bg-yellow-300 text-gray-900 tracking-wide aspect-square w-20 p-1 grid place-items-center leading-8'
+  class='text-4xl font-montserrat font-black bg-yellow-300 text-gray-900 tracking-wide aspect-square w-20 p-1 grid place-items-center leading-8 scale-125'
+  id='logo'
 >
   DH<br />BA
 </div>
+
+<script>
+  const logo = document.getElementById('logo')
+  logo!.addEventListener('click', () => {
+    logo!.classList.toggle('scale-125')
+    logo!.classList.toggle('scale-100')
+  })
+</script>
