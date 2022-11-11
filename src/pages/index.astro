@@ -14,27 +14,30 @@ import TitleMarquee from '../components/TitleMarquee.astro'
       description='Dhruv Bakshi: Frontend Web Developer'
     />
   </head>
-  <body>
-    <div class='wrapper min-h-screen flex flex-col gap-5'>
+  <body class='overflow-x-hidden'>
+    <div class='wrapper min-h-screen flex flex-col md:gap-5'>
       <Nav />
       <Banner />
     </div>
     <TitleMarquee text={'PROJECTS'} />
     <div class='wrapper'>
-      <div class='flex flex-col gap-52'>
+      <div class='flex flex-col gap-16 md:gap-52'>
         <Project
           index={1}
           heading='STRIDE VENTURES'
+          image='/assets/portfolio/stride_ventures.png'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fermentum nisl in venenatis. Duis bibendum erat et diam lacinia, ut finibus neque fringilla. Nam sit amet nibh dolor. Aliquam dignissim porta quam. Maecenas eros turpis, auctor a dolor id, luctus sagittis dui. Etiam tempor enim vitae nunc convallis tristique. Aliquam erat volutpat.'
         />
         <Project
           index={2}
           heading='WHITE RED SPACE'
+          image='/assets/portfolio/whiteredspace.png'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fermentum nisl in venenatis. Duis bibendum erat et diam lacinia, ut finibus neque fringilla. Nam sit amet nibh dolor. Aliquam dignissim porta quam. Maecenas eros turpis, auctor a dolor id, luctus sagittis dui. Etiam tempor enim vitae nunc convallis tristique. Aliquam erat volutpat.'
         />
         <Project
           index={3}
           heading='TWATTER'
+          image='/assets/portfolio/twatter.png'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fermentum nisl in venenatis. Duis bibendum erat et diam lacinia, ut finibus neque fringilla. Nam sit amet nibh dolor. Aliquam dignissim porta quam. Maecenas eros turpis, auctor a dolor id, luctus sagittis dui. Etiam tempor enim vitae nunc convallis tristique. Aliquam erat volutpat.'
         />
       </div>

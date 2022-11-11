@@ -3,25 +3,28 @@ interface Props {
   index: number
   heading: string
   description: string
+  image: string
 }
-const { index = 0, heading, description }: Props = Astro.props
+const { index = 0, heading, description, image }: Props = Astro.props
 ---
 
 <div
-  class={`flex justify-between text-white w-full gap-10 items-center ${
-    index % 2 && 'flex-row-reverse'
+  class={`flex justify-between flex-col-reverse md:flex-row text-white w-full gap-10 items-center ${
+    index % 2 && 'md:flex-row-reverse'
   }`}
 >
-  <div class='w-3/5'>
-    <h2 class='font-bungee text-7xl bg-clip-text bg-lime-200 text-zinc-900'>
-      {index}. {heading}
+  <div class='w-full md:w-3/5'>
+    <h2 class='font-bungee text-5xl md:text-7xl text-lime-200'>
+      {heading}
     </h2>
     <p class='font-montserrat mt-5 text-xl text-lime-50'>{description}</p>
     <button
-      class='py-2 px-3 hover:bg-green-700 bg-green-500 transition-all text-gray-900 font-extrabold text-xl w-fit mt-5'
+      class='py-2 px-3 hover:bg-yellow-700 bg-yellow-400 transition-all text-gray-900 font-extrabold text-xl w-full md:w-fit mt-5'
     >
       READ MORE
     </button>
   </div>
-  <div class='w-2/5 aspect-video rounded-xl outline'></div>
+  <div class='w-full md:w-2/5 aspect-video rounded-xl outline overflow-hidden'>
+    <img src={image} class='h-full w-full object-cover' />
+  </div>
 </div>
