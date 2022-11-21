@@ -4,7 +4,6 @@ import MainHead from '../components/MainHead.astro'
 import Nav from '../components/Nav.astro'
 import Banner from '../components/Banner/index.astro'
 import Project from '../components/Projects/index.astro'
-import TitleMarquee from '../components/TitleMarquee.astro'
 ---
 
 <html lang='en'>
@@ -19,7 +18,49 @@ import TitleMarquee from '../components/TitleMarquee.astro'
       <Nav />
       <Banner />
     </div>
-    <TitleMarquee text={'PROJECTS'} />
+    <div class='wrapper flex justify-between items-center text-white h-screen'>
+      <div class='w-3/5 flex flex-col gap-5 font-comforta'>
+        <h2 class='font-bungee text-7xl text-[#d3e4e6]'>What I do?</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cum placeat
+        delectus nobis commodi, voluptate error labore modi aut vero deserunt harum
+        optio eaque ex voluptatem distinctio nostrum perferendis unde. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Odit doloribus laborum quaerat
+        magnam labore amet quasi facere molestiae! Sed at dolores velit delectus
+        quia quasi provident ratione voluptates, quis minima?
+      </div>
+      <img
+        src='/assets/handy-browser-window-with-sunglasses.svg'
+        class='w-1/3'
+      />
+    </div>
+    <div class='wrapper flex justify-between items-center text-white h-screen'>
+      <img src='/assets/handy-launch-rocket.svg' class='w-1/3' />
+      <div class='w-3/5 flex flex-col gap-5 font-comforta'>
+        <h2 class='font-bungee text-7xl text-[#b5dcfa]'>What I do?</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cum placeat
+        delectus nobis commodi, voluptate error labore modi aut vero deserunt harum
+        optio eaque ex voluptatem distinctio nostrum perferendis unde. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Odit doloribus laborum quaerat
+        magnam labore amet quasi facere molestiae! Sed at dolores velit delectus
+        quia quasi provident ratione voluptates, quis minima?
+      </div>
+    </div><div
+      class='wrapper flex justify-between items-center text-white h-screen'
+    >
+      <div class='w-3/5 flex flex-col gap-5 font-comforta'>
+        <h2 class='font-bungee text-7xl text-[#d3e4e6]'>What I do?</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cum placeat
+        delectus nobis commodi, voluptate error labore modi aut vero deserunt harum
+        optio eaque ex voluptatem distinctio nostrum perferendis unde. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Odit doloribus laborum quaerat
+        magnam labore amet quasi facere molestiae! Sed at dolores velit delectus
+        quia quasi provident ratione voluptates, quis minima?
+      </div>
+      <img
+        src='/assets/handy-browser-window-with-sunglasses.svg'
+        class='w-1/3'
+      />h
+    </div>
     <div class='wrapper'>
       <div class='flex flex-col gap-16 md:gap-52'>
         <Project

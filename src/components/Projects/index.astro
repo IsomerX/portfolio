@@ -24,7 +24,9 @@ const { index = 0, heading, description, image }: Props = Astro.props
       READ MORE
     </button>
   </div>
-  <div class='w-full md:w-2/5 aspect-video rounded-xl outline overflow-hidden'>
+  <div
+    class='w-full md:w-2/5 aspect-video rounded-xl overflow-hidden shadow-xl shadow-black'
+  >
     <img src={image} class='h-full w-full object-cover' />
   </div>
 </div>
