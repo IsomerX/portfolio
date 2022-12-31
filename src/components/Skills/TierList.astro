@@ -1,0 +1,42 @@
+---
+import TierRow from './TierRow.astro'
+---
+
+<div class='w-3/4 mx-auto flex flex-col gap-2'>
+  <TierRow
+    heading='My Stack'
+    subheading='(Stuff I use all the time)'
+    skills={[
+      { name: 'NextJS', image: '/assets/icons/nextjs.svg' },
+      { name: 'Tailwind', image: '/assets/icons/tailwind.svg' },
+      { name: 'PostgreSQL', image: '/assets/icons/postgresql.svg' },
+      { name: 'NodeJS', image: '/assets/icons/node.svg' },
+      { name: 'Docker', image: '/assets/icons/docker.svg' },
+      { name: 'tRPC', image: '/assets/icons/trpc.svg' },
+    ]}
+  />
+  <TierRow
+    heading='Tech Stack'
+    subheading='(Stuff I use sometime)'
+    skills={[
+      { name: 'MongoDB', image: '/assets/icons/mongodb.svg' },
+      { name: 'Firebase', image: '/assets/icons/firebase.svg' },
+      { name: 'AWS', image: '/assets/icons/aws.svg' },
+      { name: 'React', image: '/assets/icons/react.svg' },
+      { name: 'Astro', image: '/assets/icons/astro.svg' },
+    ]}
+  />
+  <TierRow
+    heading='Learn Stack'
+    subheading='(Stuff I am learning)'
+    skills={[
+      { name: 'Rust', image: '/assets/icons/rust.svg' },
+      { name: 'Flutter', image: '/assets/icons/flutter.svg' },
+      { name: 'Kubernetes', image: '/assets/icons/kubernetes.svg' },
+      { name: 'Golang', image: '/assets/icons/golang.svg' },
+    ]}
+  />
+  <!-- <TierRow />
+  <TierRow />
+  <TierRow /> -->
+</div>

@@ -4,6 +4,9 @@ import MainHead from '../components/MainHead.astro'
 import Nav from '../components/Nav.astro'
 import Banner from '../components/Banner/index.astro'
 import Project from '../components/Projects/index.astro'
+import { projects } from '../projects_data'
+import Footer from '../components/Footer.astro'
+import TierList from '../components/Skills/TierList.astro'
 ---
 
 <html lang='en'>
@@ -18,73 +21,38 @@ import Project from '../components/Projects/index.astro'
       <Nav />
       <Banner />
     </div>
-    <div class='wrapper flex justify-between items-center text-white h-screen'>
-      <div class='w-3/5 flex flex-col gap-5 font-comforta'>
-        <h2 class='font-bungee text-7xl text-[#d3e4e6]'>What I do?</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cum placeat
-        delectus nobis commodi, voluptate error labore modi aut vero deserunt harum
-        optio eaque ex voluptatem distinctio nostrum perferendis unde. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Odit doloribus laborum quaerat
-        magnam labore amet quasi facere molestiae! Sed at dolores velit delectus
-        quia quasi provident ratione voluptates, quis minima?
-      </div>
-      <img
-        src='/assets/handy-browser-window-with-sunglasses.svg'
-        class='w-1/3'
-      />
-    </div>
-    <div class='wrapper flex justify-between items-center text-white h-screen'>
-      <img src='/assets/handy-launch-rocket.svg' class='w-1/3' />
-      <div class='w-3/5 flex flex-col gap-5 font-comforta'>
-        <h2 class='font-bungee text-7xl text-[#b5dcfa]'>What I do?</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cum placeat
-        delectus nobis commodi, voluptate error labore modi aut vero deserunt harum
-        optio eaque ex voluptatem distinctio nostrum perferendis unde. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Odit doloribus laborum quaerat
-        magnam labore amet quasi facere molestiae! Sed at dolores velit delectus
-        quia quasi provident ratione voluptates, quis minima?
-      </div>
-    </div><div
-      class='wrapper flex justify-between items-center text-white h-screen'
+    <div
+      class='text-3xl font-amatic text-center bg-black/40 rounded-xl shadow-xl shadow-black text-white py-40 my-40 w-full md:w-4/5 mx-auto'
     >
-      <div class='w-3/5 flex flex-col gap-5 font-comforta'>
-        <h2 class='font-bungee text-7xl text-[#d3e4e6]'>What I do?</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias cum placeat
-        delectus nobis commodi, voluptate error labore modi aut vero deserunt harum
-        optio eaque ex voluptatem distinctio nostrum perferendis unde. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Odit doloribus laborum quaerat
-        magnam labore amet quasi facere molestiae! Sed at dolores velit delectus
-        quia quasi provident ratione voluptates, quis minima?
-      </div>
-      <img
-        src='/assets/handy-browser-window-with-sunglasses.svg'
-        class='w-1/3'
-      />h
+      SKILLS BELOW 👇
     </div>
+    <TierList />
+    <div
+      class='text-3xl font-amatic text-center bg-black/40 rounded-xl shadow-xl shadow-black text-white py-40 my-40 w-full md:w-4/5 mx-auto'
+    >
+      PROJECTS BELOW 👇
+    </div>
+
     <div class='wrapper'>
       <div class='flex flex-col gap-16 md:gap-52'>
-        <Project
-          index={1}
-          heading='STRIDE VENTURES'
-          image='/assets/portfolio/stride_ventures.png'
-          mimage='/assets/portfolio/twatter-m.png'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fermentum nisl in venenatis. Duis bibendum erat et diam lacinia, ut finibus neque fringilla. Nam sit amet nibh dolor. Aliquam dignissim porta quam. Maecenas eros turpis, auctor a dolor id, luctus sagittis dui. Etiam tempor enim vitae nunc convallis tristique. Aliquam erat volutpat.'
-        />
-        <Project
-          index={2}
-          heading='WHITE RED SPACE'
-          image='/assets/portfolio/whiteredspace.png'
-          mimage='/assets/portfolio/whiteredspace-m.png'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fermentum nisl in venenatis. Duis bibendum erat et diam lacinia, ut finibus neque fringilla. Nam sit amet nibh dolor. Aliquam dignissim porta quam. Maecenas eros turpis, auctor a dolor id, luctus sagittis dui. Etiam tempor enim vitae nunc convallis tristique. Aliquam erat volutpat.'
-        />
-        <Project
-          index={3}
-          heading='TWATTER'
-          image='/assets/portfolio/twatter.png'
-          mimage='/assets/portfolio/twatter-m.png'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fermentum nisl in venenatis. Duis bibendum erat et diam lacinia, ut finibus neque fringilla. Nam sit amet nibh dolor. Aliquam dignissim porta quam. Maecenas eros turpis, auctor a dolor id, luctus sagittis dui. Etiam tempor enim vitae nunc convallis tristique. Aliquam erat volutpat.'
-        />
+        {
+          projects.map((item, idx) => (
+            <Project
+              index={idx}
+              heading={item.heading}
+              image={item.image}
+              mimage={item.mimage}
+              description={item.description}
+            />
+          ))
+        }
       </div>
     </div>
+    <div
+      class='text-3xl font-amatic text-center bg-black/40 rounded-xl shadow-xl shadow-black text-white py-40 my-40 w-full md:w-4/5 mx-auto'
+    >
+      WORK EXPERIENCE TIMELINE BELOW 👇
+    </div>
+    <Footer />
   </body>
 </html>

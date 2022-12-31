@@ -10,7 +10,7 @@ const { index = 0, heading, description, image, mimage }: Props = Astro.props
 ---
 
 <div
-  class={`flex justify-between flex-col-reverse md:flex-row text-white w-full gap-10 items-center ${
+  class={`flex justify-between flex-col-reverse md:flex-row text-white w-full gap-24 items-center ${
     index % 2 && 'md:flex-row-reverse'
   }`}
 >
@@ -28,11 +28,11 @@ const { index = 0, heading, description, image, mimage }: Props = Astro.props
   <div class='w-full md:w-2/5 shadow-black relative'>
     <img
       src={image}
-      class='w-3/4 left-1/2 -translate-x-1/2 aspect-video rounded-xl shadow-xl shadow-black absolute bottom-0 z-50'
+      class='w-3/4 left-1/2 -translate-x-1/2 rounded-xl shadow-xl shadow-black absolute bottom-0 z-50'
     />
     <img
       src={mimage}
-      class='max-h-[600px] rounded-xl shadow-xl shadow-black opacity-30'
+      class='max-h-[600px] rounded-xl shadow-xl shadow-black opacity-50'
     />
   </div>
 </div>
