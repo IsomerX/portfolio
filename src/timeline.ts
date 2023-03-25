@@ -9,7 +9,7 @@ const TIMELINE = {
 			desc: "Started working as a frontend intern, working on developing various screens and features demanded by the wonderful clients of YS Tech. The role soon turned into a Part-time one, which came with responsibilities of its own. Working on more complicated projects and leading the frontend of an entire project on my own. I am currently working with React, ReactQuery, AntD and a few other technologies as per the project's requirements."
 		},
 		{
-			logo: "/assets/companies/fresouces.jpeg",
+			logo: "/assets/companies/fresources.jpeg",
 			name: "Fresources",
 			time_s: "Jan 2022",
 			time_e: "Present",
@@ -19,7 +19,7 @@ const TIMELINE = {
 	],
 	2022: [
 		{
-			logo: "",
+			logo: "/assets/companies/bela.jpeg",
 			name: "Bela Fasonado",
 			time_s: "Jun 2022",
 			time_e: "Aug 2022",
@@ -27,7 +27,7 @@ const TIMELINE = {
 			desc: "Bela Fasonado is an architechtural firm based in Gurgaon, India. I am responsible to build its website and do all of its SEO. The site is built on wordpress. I handled the SEO, by establishing onsite and offsite backlinks. I was able to get the site to rank 2 on google for the client's desired keywords.",
 		},
 		{
-			logo: "",
+			logo: "/assets/companies/vance.jpeg",
 			name: "Vance (YC W22)",
 			time_s: "Mar 2022",
 			time_e: "Apr 2022",
@@ -37,7 +37,7 @@ const TIMELINE = {
 	],
 	2021: [
 		{
-			logo: "",
+			logo: "/assets/companies/stride.jpeg",
 			name: "Stride Ventures",
 			time_s: "Jun 2022",
 			time_e: "July 2022",
@@ -45,7 +45,7 @@ const TIMELINE = {
 			desc: "I was appointed by Stride Ventures to build their website. They wanted a smooth and robust design that showed how strong they were as a venture capital while also keep a bit of a create aspect. I was able to create a website that aligned with their requirements on an urgent basis, as per the client's demand."
 		},
 		{
-			logo: "",
+			logo: "/assets/companies/whiteredspace.jpg",
 			name: "White Red Space",
 			time_s: "Nov 2020",
 			time_e: "Feb 2021",
