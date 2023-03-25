@@ -6,7 +6,7 @@ const TIMELINE = {
 			time_s: "May 2022",
 			time_e: "Present",
 			role: "Lead Frontend Developer, Part-time",
-			desc: ""
+			desc: "Started working as a frontend intern, working on developing various screens and features demanded by the wonderful clients of YS Tech. The role soon turned into a Part-time one, which came with responsibilities of its own. Working on more complicated projects and leading the frontend of an entire project on my own. I am currently working with React, ReactQuery, AntD and a few other technologies as per the project's requirements."
 		},
 		{
 			logo: "",

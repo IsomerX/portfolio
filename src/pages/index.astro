@@ -7,6 +7,7 @@ import Project from '../components/Projects/index.astro'
 import { projects } from '../projects_data'
 import Footer from '../components/Footer.astro'
 import TierList from '../components/Skills/TierList.astro'
+import TIMELINE from '../timeline'
 ---
 
 <html lang='en'>
@@ -53,34 +54,49 @@ import TierList from '../components/Skills/TierList.astro'
     >
       WORK EXPERIENCE TIMELINE BELOW 👇
     </div>
-    <div class='wrapper'>
-      <div class='flex justify-between'>
-        <h2
-          class='font-bungee w-1/2 text-center text-5xl md:text-7xl text-lime-200'
-        >
-          2023
-        </h2>
-        <div class='w-1/2'>
-          <div class='flex items-center gap-5'>
-            <img
-              src='/assets/companies/ys.jpeg'
-              class='rounded-full h-16 aspect-square shadow-2xl'
-            />
-            <div>
-              <h4
-                class='text-yellow-200 font-montserrat font-semibold text-3xl'
-              >
-                Yellow Sapphire Technologies
-              </h4>
-              <h6 class='text-lime-300 font-montserrat font-normal text-md'>
-                May - Present
-              </h6>
-            </div>
-          </div>
-					<h5 class="font-montserrat font-semibold text-xl text-lime-100 my-3">Frontend Developer</h5>
-          <p class='font-montserrat text-xl text-lime-50'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, reprehenderit laudantium porro quos cumque labore corporis itaque nihil alias libero deserunt molestiae magni. Ducimus eveniet enim harum perferendis sequi velit!</p>
-        </div>
-      </div>
+    <div class='wrapper space-y-20'>
+      {
+        Object.keys(TIMELINE)
+          .sort()
+          .reverse()
+          .map((item) => {
+            return (
+              <div class='flex justify-between'>
+                <h2 class='w-1/2 text-center font-bungee text-5xl text-lime-200 md:text-7xl'>
+                  {item}
+                </h2>
+                <div class='flex w-1/2 flex-col gap-10'>
+                    {TIMELINE[item as keyof typeof TIMELINE].map((item) => {
+                      return (
+                        <div>
+                          <div class='flex items-center gap-5'>
+                            <img
+                              src={item.logo}
+                              class='aspect-square h-16 rounded-full shadow-2xl'
+                            />
+                            <div>
+                              <h4 class='font-montserrat text-3xl font-semibold text-yellow-200'>
+                                {item.name}
+                              </h4>
+                              <h6 class='text-md font-montserrat font-normal text-lime-300'>
+                                {`${item.time_s} - ${item.time_e}`}
+                              </h6>
+                            </div>
+                          </div>
+                          <h5 class='my-3 font-montserrat text-xl font-semibold text-lime-100'>
+                            {item.role}
+                          </h5>
+                          <p class='font-montserrat text-xl text-lime-50'>
+                            {item.desc}
+                          </p>
+                        </div>
+                      )
+                    })}
+                </div>
+              </div>
+            )
+          })
+      }
     </div>
     <Footer />
   </body>
