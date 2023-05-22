@@ -10,18 +10,35 @@ interface Props {
 const { skills, heading, subheading } = Astro.props
 ---
 
-<div class='grid grid-cols-8 rounded-xl gap-2'>
+<div class='grid-cols-8 rounded-xl gap-2 hidden lg:grid'>
   <div
     class='bg-yellow-400 text-zinc-900 col-span-2 rounded-xl shadow-md shadow-black text-center flex flex-col justify-center aspect-[2/1]'
   >
-    <h3 class='font-bungee text-3xl font-bold text-center'>
+    <h3 class='font-bungee text-2xl xl:text-3xl font-bold text-center'>
       {heading}
     </h3>
     {subheading && <h4 class='font-montserrat font-bold'>{subheading}</h4>}
   </div>
   {
     skills.map((item) => (
-      <div class='bg-white/5 rounded-xl shadow-md shadow-black p-10 aspect-square'>
+      <div class='bg-white/5 rounded-xl shadow-md shadow-black p-5 xl:p-7 2xl:p-10 aspect-square'>
+        <img src={item.image} class='h-full w-full opacity-80' />
+      </div>
+    ))
+  }
+</div>
+<div class='grid grid-cols-3 md:grid-cols-4 rounded-xl gap-2 lg:hidden'>
+  <div
+    class='bg-yellow-400 text-zinc-900 col-span-3 md:col-span-4 rounded-xl shadow-md shadow-black text-center flex flex-col justify-center py-10'
+  >
+    <h3 class='font-bungee text-3xl sm:text-4xl font-bold text-center'>
+      {heading}
+    </h3>
+    {subheading && <h4 class='font-montserrat font-bold'>{subheading}</h4>}
+  </div>
+  {
+    skills.map((item) => (
+      <div class='bg-white/5 rounded-xl shadow-md shadow-black p-7 sm:p-12 aspect-square'>
         <img src={item.image} class='h-full w-full opacity-80' />
       </div>
     ))

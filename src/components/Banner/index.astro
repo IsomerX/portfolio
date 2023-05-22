@@ -3,16 +3,20 @@ import Almost from './Almost.astro'
 ---
 
 <div
-  class='text-blue-200 font-montserrat text-2xl mt-12 mb-6 font-semibold tracking-wide w-full'
+  class='text-blue-200 font-montserrat text-2xl mt-12 mb-6 text-center lg:text-left font-semibold tracking-wide w-full'
 >
   THIS IS DHRUV BAKSHI
 </div>
-<div class='text-5xl md:text-9xl text-gray-200 font-bungee'>
-  <Almost />{' '} THE<br class='hidden md:block' /> BEST FRONTEND<br /> DEVELOPER
+<div
+  class='text-5xl md:text-6xl lg:text-9xl text-gray-200 font-bungee text-center lg:text-left'
+>
+  <Almost /><br class='sm:hidden' />{' '} THE<br
+    class='hidden sm:block lg:hidden 2xl:block'
+  /> BEST FRONTEND<br /> DEVELOPER
 </div>
 <div class='flex gap-4 mt-12'>
   <button
-    class='py-2 md:py-3 px-5 hover:bg-blue-700 bg-purple-200 transition-all text-gray-900 font-extrabold text-xl md:text-2xl w-fit'
+    class='py-2 md:py-3 px-5 hover:bg-blue-700 bg-purple-200 transition-all text-gray-900 font-extrabold text-xl md:text-2xl w-full lg:w-fit max-w-[500px] mx-auto lg:mx-0'
   >
     CONTACT ME
   </button>

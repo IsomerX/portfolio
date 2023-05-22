@@ -5,6 +5,7 @@ export const projects = [
     mimage: '/assets/portfolio/whiteredspace-m.png',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fermentum nisl in venenatis. Duis bibendum erat et diam lacinia, ut finibus neque fringilla. Nam sit amet nibh dolor. Aliquam dignissim porta quam. Maecenas eros turpis, auctor a dolor id, luctus sagittis dui. Etiam tempor enim vitae nunc convallis tristique. Aliquam erat volutpat.',
+    link: 'https://whiteredspace.in/',
   },
   {
     heading: 'STAR ATLAS',
@@ -12,6 +13,7 @@ export const projects = [
     mimage: '/assets/portfolio/staratlas-m.png',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fermentum nisl in venenatis. Duis bibendum erat et diam lacinia, ut finibus neque fringilla. Nam sit amet nibh dolor. Aliquam dignissim porta quam. Maecenas eros turpis, auctor a dolor id, luctus sagittis dui. Etiam tempor enim vitae nunc convallis tristique. Aliquam erat volutpat.',
+    link: 'https://explorer.staratlas.club/home',
   },
   {
     heading: 'STRIDE VENTURES',
@@ -19,6 +21,7 @@ export const projects = [
     mimage: '/assets/portfolio/stride_ventures-m.png',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fermentum nisl in venenatis. Duis bibendum erat et diam lacinia, ut finibus neque fringilla. Nam sit amet nibh dolor. Aliquam dignissim porta quam. Maecenas eros turpis, auctor a dolor id, luctus sagittis dui. Etiam tempor enim vitae nunc convallis tristique. Aliquam erat volutpat.',
+    link: 'https://strideventures.in',
   },
   {
     heading: 'URVI PORTFOLIO',
@@ -26,6 +29,7 @@ export const projects = [
     mimage: '/assets/portfolio/urviportfolio-m.png',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fermentum nisl in venenatis. Duis bibendum erat et diam lacinia, ut finibus neque fringilla. Nam sit amet nibh dolor. Aliquam dignissim porta quam. Maecenas eros turpis, auctor a dolor id, luctus sagittis dui. Etiam tempor enim vitae nunc convallis tristique. Aliquam erat volutpat.',
+    link: 'https://urvisuhane.vercel.app/',
   },
   {
     heading: 'FRESOURCES',
@@ -33,6 +37,7 @@ export const projects = [
     mimage: '/assets/portfolio/fresources-m.png',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fermentum nisl in venenatis. Duis bibendum erat et diam lacinia, ut finibus neque fringilla. Nam sit amet nibh dolor. Aliquam dignissim porta quam. Maecenas eros turpis, auctor a dolor id, luctus sagittis dui. Etiam tempor enim vitae nunc convallis tristique. Aliquam erat volutpat.',
+    link: 'https://fresources.tech/',
   },
 
   {
@@ -41,5 +46,6 @@ export const projects = [
     mimage: '/assets/portfolio/twatter-m.png',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus fermentum nisl in venenatis. Duis bibendum erat et diam lacinia, ut finibus neque fringilla. Nam sit amet nibh dolor. Aliquam dignissim porta quam. Maecenas eros turpis, auctor a dolor id, luctus sagittis dui. Etiam tempor enim vitae nunc convallis tristique. Aliquam erat volutpat.',
+    link: 'https://clone-twitter-zeta.vercel.app/',
   },
 ]
