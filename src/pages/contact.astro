@@ -1,0 +1,37 @@
+---
+// Component Imports
+import MainHead from '../components/MainHead.astro'
+import Nav from '../components/Nav.astro'
+import Banner from '../components/Banner/index.astro'
+import Project from '../components/Projects/index.astro'
+import { projects } from '../projects_data'
+import Footer from '../components/Footer.astro'
+import TierList from '../components/Skills/TierList.astro'
+---
+
+<html lang='en'>
+  <head>
+    <MainHead
+      title='Dhruv Bakshi: Contact'
+      description='Dhruv Bakshi: Frontend Web Developer'
+    />
+  </head>
+  <body class='overflow-x-hidden'>
+    <div class='wrapper min-h-screen flex flex-col md:gap-5'>
+      <Nav />
+      <div class='text-5xl md:text-9xl text-gray-200 font-bungee text-center'>
+        LETS'S CONNECT
+      </div>
+      <div
+        class='text-2xl md:text-4xl text-gray-200 font-montserrat text-center'
+      >
+        I'm always open to new opportunities and collaborations.
+      </div>
+
+      <Footer />
+      <script>
+        import '../scripts/Almost'
+      </script>
+    </div>
+  </body>
+</html>
