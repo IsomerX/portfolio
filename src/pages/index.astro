@@ -7,6 +7,7 @@ import Project from '../components/Projects/index.astro'
 import { projects } from '../projects_data'
 import Footer from '../components/Footer.astro'
 import TierList from '../components/Skills/TierList.astro'
+import TIMELINE from '../timeline'
 ---
 
 <html lang='en'>
@@ -17,18 +18,20 @@ import TierList from '../components/Skills/TierList.astro'
     />
   </head>
   <body class='overflow-x-hidden'>
-    <div class='wrapper min-h-screen flex flex-col md:gap-5'>
+    <div
+      class='wrapper min-h-screen justify-center lg:justify-start flex flex-col md:gap-5'
+    >
       <Nav />
       <Banner />
     </div>
     <div
-      class='text-3xl font-amatic text-center bg-black/40 rounded-xl shadow-xl shadow-black text-white py-40 my-40 w-full md:w-4/5 mx-auto'
+      class='text-3xl font-amatic text-center bg-black/40 rounded-xl shadow-xl shadow-black text-white py-40 my-40 w-[90%] lg:w-4/5 mx-auto'
     >
       SKILLS BELOW 👇
     </div>
     <TierList />
     <div
-      class='text-3xl font-amatic text-center bg-black/40 rounded-xl shadow-xl shadow-black text-white py-40 my-40 w-full md:w-4/5 mx-auto'
+      class='text-3xl font-amatic text-center bg-black/40 rounded-xl shadow-xl shadow-black text-white py-40 my-40 w-[90%] lg:w-4/5 mx-auto'
     >
       PROJECTS BELOW 👇
     </div>
@@ -38,6 +41,7 @@ import TierList from '../components/Skills/TierList.astro'
         {
           projects.map((item, idx) => (
             <Project
+              link={item.link}
               index={idx}
               heading={item.heading}
               image={item.image}
@@ -49,9 +53,53 @@ import TierList from '../components/Skills/TierList.astro'
       </div>
     </div>
     <div
-      class='text-3xl font-amatic text-center bg-black/40 rounded-xl shadow-xl shadow-black text-white py-40 my-40 w-full md:w-4/5 mx-auto'
+      class='text-3xl font-amatic text-center bg-black/40 rounded-xl shadow-xl shadow-black text-white py-40 my-40 w-[90%] lg:w-4/5 mx-auto'
     >
       WORK EXPERIENCE TIMELINE BELOW 👇
+    </div>
+    <div class='wrapper space-y-20'>
+      {
+        Object.keys(TIMELINE)
+          .sort()
+          .reverse()
+          .map((item) => {
+            return (
+              <div class='flex flex-col lg:flex-row justify-between'>
+                <h2 class='w-full lg:w-1/2 text-center font-bungee text-6xl mb-10 lg:mb-0 lg:text-5xl text-lime-200 md:text-7xl'>
+                  {item}
+                </h2>
+                <div class='flex w-full lg:w-1/2 flex-col gap-10'>
+                  {TIMELINE[item as keyof typeof TIMELINE].map((item) => {
+                    return (
+                      <div>
+                        <div class='flex items-center gap-5'>
+                          <img
+                            src={item.logo}
+                            class='aspect-square h-16 rounded-full shadow-2xl'
+                          />
+                          <div>
+                            <h4 class='font-montserrat text-3xl font-semibold text-yellow-200'>
+                              {item.name}
+                            </h4>
+                            <h6 class='text-md font-montserrat font-normal text-lime-300'>
+                              {`${item.time_s} - ${item.time_e}`}
+                            </h6>
+                          </div>
+                        </div>
+                        <h5 class='my-3 font-montserrat text-xl font-semibold text-lime-100'>
+                          {item.role}
+                        </h5>
+                        <p class='font-montserrat text-xl text-lime-50'>
+                          {item.desc}
+                        </p>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )
+          })
+      }
     </div>
     <Footer />
     <script>

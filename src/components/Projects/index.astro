@@ -5,8 +5,16 @@ interface Props {
   description: string
   image: string
   mimage: string
+  link: string
 }
-const { index = 0, heading, description, image, mimage }: Props = Astro.props
+const {
+  index = 0,
+  heading,
+  description,
+  image,
+  mimage,
+  link,
+}: Props = Astro.props
 ---
 
 <div
@@ -15,15 +23,17 @@ const { index = 0, heading, description, image, mimage }: Props = Astro.props
   }`}
 >
   <div class='w-full md:w-3/5'>
-    <h2 class='font-bungee text-5xl md:text-7xl text-lime-200'>
+    <h2 class='font-bungee text-5xl md:text-7xl text-lime-200 break-words'>
       {heading}
     </h2>
     <p class='font-montserrat mt-5 text-xl text-lime-50'>{description}</p>
-    <button
-      class='py-2 px-3 hover:bg-yellow-700 bg-yellow-400 transition-all text-gray-900 font-extrabold text-xl w-full md:w-fit mt-5'
-    >
-      READ MORE
-    </button>
+    <a href={link} target='_blank'>
+      <button
+        class='py-2 px-3 hover:bg-yellow-700 bg-yellow-400 transition-all text-gray-900 font-extrabold text-xl w-full md:w-fit mt-5'
+      >
+        SEE IT IN ACTION
+      </button>
+    </a>
   </div>
   <div class='w-full md:w-2/5 shadow-black relative'>
     <img
