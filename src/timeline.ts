@@ -2,9 +2,17 @@ const TIMELINE = {
 	2023: [
 		{
 			logo: "/assets/companies/ys.jpeg",
+			name: "Create",
+			time_s: "Sept 2023",
+			time_e: "Present",
+			role: "Full Stack Developer",
+			desc: "In my current role at Create, I work extensively with JavaScript, React, Typescript, Node.js, GraphQL, and frameworks like Tailwind/MUI, primarily in a full-stack capacity. I lead new projects from conception to deployment, focusing on scalable solutions, optimal performance, and agile methodologies, collaborating across time zones via GitHub and Discord, while constantly seeking learning opportunities."
+		},
+		{
+			logo: "/assets/companies/ys.jpeg",
 			name: "Yellow Sapphire Technologies",
 			time_s: "May 2022",
-			time_e: "Present",
+			time_e: "Aug 2023",
 			role: "Lead Frontend Developer, Part-time",
 			desc: "Started working as a frontend intern, working on developing various screens and features demanded by the wonderful clients of YS Tech. The role soon turned into a Part-time one, which came with responsibilities of its own. Working on more complicated projects and leading the frontend of an entire project on my own. I am currently working with React, ReactQuery, AntD and a few other technologies as per the project's requirements."
 		},
