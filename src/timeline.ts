@@ -1,7 +1,7 @@
 const TIMELINE = {
 	2023: [
 		{
-			logo: "/assets/companies/ys.jpeg",
+			logo: "/assets/companies/create.jpeg",
 			name: "Create",
 			time_s: "Sept 2023",
 			time_e: "Present",
