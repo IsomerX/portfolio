@@ -17,21 +17,51 @@ import TierList from '../components/Skills/TierList.astro'
     />
   </head>
   <body class='overflow-x-hidden'>
-    <div class='wrapper min-h-screen flex flex-col md:gap-5'>
+    <div
+      class='wrapper flex flex-col md:gap-5 items-center h-screen justify-center'
+    >
       <Nav />
-      <div class='text-5xl md:text-9xl text-gray-200 font-bungee text-center'>
-        LETS'S CONNECT
+      <div class='flex flex-col items-center gap-10 mt-10'>
+        <div class='text-5xl md:text-7xl text-gray-200 font-bungee text-center'>
+          LETS'S CONNECT
+        </div>
+        <div
+          class='text-lg px-5 md:text-2xl text-gray-200 font-montserrat text-center max-w-4xl'
+        >
+          Have a project in mind or just want to say hi? Feel free to reach out
+          to me. I'm always open to new opportunities and collaborations.
+        </div>
       </div>
-      <div
-        class='text-2xl md:text-4xl text-gray-200 font-montserrat text-center'
-      >
-        I'm always open to new opportunities and collaborations.
-      </div>
-
-      <Footer />
-      <script>
-        import '../scripts/Almost'
-      </script>
+      <footer class='flex justify-center gap-10 my-10'>
+        <a
+          href='https://github.com/isomerX'
+          target='_blank'
+          class='aspect-square shadow-lg shadow-black rounded-full bg-black p-3'
+        >
+          <img src='/assets/icons/github.svg' class='h-8' />
+        </a>
+        <a
+          href='https://www.linkedin.com/in/dhruvbakshiwork'
+          target='_blank'
+          class='aspect-square shadow-lg shadow-black rounded-full bg-black p-3'
+        >
+          <img src='/assets/icons/linkedin.svg' class='h-8' />
+        </a>
+        <a
+          href='https://twitter.com/dramaticdhruv'
+          target='_blank'
+          class='aspect-square shadow-lg shadow-black rounded-full bg-black p-3'
+        >
+          <img src='/assets/icons/twitter.svg' class='h-8' />
+        </a>
+        <a
+          href='mailto:dhruvbakshi12343@gmail.com'
+          target='_blank'
+          class='aspect-square shadow-lg shadow-black rounded-full bg-black p-3'
+        >
+          <img src='/assets/icons/mail.svg' class='h-8' />
+        </a>
+      </footer>
     </div>
   </body>
 </html>

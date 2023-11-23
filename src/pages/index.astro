@@ -69,32 +69,34 @@ import TIMELINE from '../timeline'
                   {item}
                 </h2>
                 <div class='flex w-full lg:w-1/2 flex-col gap-10'>
-                  {TIMELINE[item as keyof typeof TIMELINE].map((item) => {
-                    return (
-                      <div>
-                        <div class='flex items-center gap-5'>
-                          <img
-                            src={item.logo}
-                            class='aspect-square h-16 rounded-full shadow-2xl'
-                          />
-                          <div>
-                            <h4 class='font-montserrat text-3xl font-semibold text-yellow-200'>
-                              {item.name}
-                            </h4>
-                            <h6 class='text-md font-montserrat font-normal text-lime-300'>
-                              {`${item.time_s} - ${item.time_e}`}
-                            </h6>
+                  {TIMELINE[item as unknown as keyof typeof TIMELINE].map(
+                    (item) => {
+                      return (
+                        <div>
+                          <div class='flex items-center gap-5'>
+                            <img
+                              src={item.logo}
+                              class='aspect-square h-16 rounded-full shadow-2xl'
+                            />
+                            <div>
+                              <h4 class='font-montserrat text-3xl font-semibold text-yellow-200'>
+                                {item.name}
+                              </h4>
+                              <h6 class='text-md font-montserrat font-normal text-lime-300'>
+                                {`${item.time_s} - ${item.time_e}`}
+                              </h6>
+                            </div>
                           </div>
+                          <h5 class='my-3 font-montserrat text-xl font-semibold text-lime-100'>
+                            {item.role}
+                          </h5>
+                          <p class='font-montserrat text-xl text-lime-50'>
+                            {item.desc}
+                          </p>
                         </div>
-                        <h5 class='my-3 font-montserrat text-xl font-semibold text-lime-100'>
-                          {item.role}
-                        </h5>
-                        <p class='font-montserrat text-xl text-lime-50'>
-                          {item.desc}
-                        </p>
-                      </div>
-                    )
-                  })}
+                      )
+                    }
+                  )}
                 </div>
               </div>
             )
