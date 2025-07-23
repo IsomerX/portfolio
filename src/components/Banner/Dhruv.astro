@@ -1,0 +1,123 @@
+<div class="fixed right-0 bottom-0 h-80 z-[100]" id="dhruv">
+  <img src="/assets/dhruv.png" class="h-full translate-y-1/4"/>
+  <img src="/assets/icons/anger.png" class="absolute top-1/4 right-[45%] opacity-0 w-12 h-12  transition-opacity duration-300" id="anger-icon"/>
+</div>
+
+<script>
+
+  const dhruv = document.getElementById("dhruv")
+  const img = dhruv?.querySelector("img")
+  const angerIcon = document.getElementById("anger-icon")
+  let mouseSpeed = 0
+  let lastMouseTime = 0
+  let lastMouseX = 0
+  let lastMouseY = 0
+  let animationFrame = null
+
+  document.addEventListener("DOMContentLoaded", function() {
+    dhruv?.classList.add("animate__bottom")
+  });
+
+  function calculateMouseSpeed(e) {
+    const currentTime = Date.now()
+    const deltaTime = currentTime - lastMouseTime
+    const deltaX = e.clientX - lastMouseX
+    const deltaY = e.clientY - lastMouseY
+    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY)
+    
+    mouseSpeed = deltaTime > 0 ? distance / deltaTime : 0
+    mouseSpeed = Math.min(mouseSpeed * 10, 50) // Scale and cap the speed
+    
+    lastMouseTime = currentTime
+    lastMouseX = e.clientX
+    lastMouseY = e.clientY
+  }
+
+  function giggle() {
+    if (!img) return
+    
+    const intensity = mouseSpeed / 3
+    const shakeX = (Math.random() - 0.5) * intensity * 2
+    const shakeY = (Math.random() - 0.5) * intensity * 1.5
+    const rotation = (Math.random() - 0.5) * intensity * 0.8
+    const scaleVariation = 1 + (Math.random() - 0.5) * intensity * 0.02
+    const skewX = (Math.random() - 0.5) * intensity * 0.3
+    const redTint = Math.min(mouseSpeed / 40, 0.4)
+    
+    // Show anger icon when shaking
+    if (angerIcon) {
+      const angerOpacity = Math.min(Math.max((mouseSpeed - 2) / 10, 0), 1)
+      angerIcon.style.opacity = angerOpacity
+      
+      // Make anger icon shake too
+      if (angerOpacity > 0) {
+        const angerShakeX = (Math.random() - 0.5) * intensity * 0.5
+        const angerShakeY = (Math.random() - 0.5) * intensity * 0.5
+        angerIcon.style.transform = `translate(${angerShakeX}px, ${angerShakeY}px)`
+      }
+    }
+    
+    img.style.transform = `translate(${shakeX}px, calc(25% + ${shakeY}px)) rotate(${rotation}deg) scale(${scaleVariation}) skewX(${skewX}deg)`
+    img.style.filter = `sepia(${redTint}) saturate(${1 + redTint}) hue-rotate(-50deg) brightness(${1.1 + redTint * 0.2}) contrast(${1.1 + redTint * 0.3})`
+    
+    mouseSpeed *= 0.88 // Gradually reduce speed when not moving
+    
+    if (mouseSpeed > 0.1) {
+      animationFrame = requestAnimationFrame(giggle)
+    } else {
+      img.style.transform = 'translate(0, 25%) rotate(0deg) scale(1) skewX(0deg)'
+      img.style.filter = 'none'
+      if (angerIcon) {
+        angerIcon.style.opacity = '0'
+        angerIcon.style.transform = 'translate(0, 0)'
+      }
+    }
+  }
+
+  dhruv?.addEventListener("mouseenter", function() {
+    mouseSpeed = 1 // Minimal initial giggle when entering
+    giggle()
+  })
+
+  dhruv?.addEventListener("mousemove", function(e) {
+    calculateMouseSpeed(e)
+    if (!animationFrame) {
+      giggle()
+    }
+  })
+
+  dhruv?.addEventListener("mouseleave", function() {
+    mouseSpeed = 0
+    if (img) {
+      img.style.transform = 'translate(0, 25%) rotate(0deg) scale(1) skewX(0deg)'
+      img.style.filter = 'none'
+    }
+    if (angerIcon) {
+      angerIcon.style.opacity = '0'
+      angerIcon.style.transform = 'translate(0, 0)'
+    }
+    if (animationFrame) {
+      cancelAnimationFrame(animationFrame)
+      animationFrame = null
+    }
+  })
+
+</script>
+
+<style>
+  .animate__bottom {
+    animation: slideInFromBottomRight 4s ease-in-out;
+    animation-iteration-count: 1;
+  }
+
+
+  @keyframes slideInFromBottomRight {
+    0% {
+      transform: translate(60%, 60%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+</style>
